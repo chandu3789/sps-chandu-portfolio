@@ -10,9 +10,20 @@ document.addEventListener("DOMContentLoaded",()=>{
     requestAnimationFrame(()=>{e.style.opacity=1;e.style.transform=`translate(-50%,-50%) scale(1.3) rotate(${(Math.random()-.5)*25}deg)`});
     setTimeout(()=>{e.style.opacity=0;e.style.transform="translate(-50%,-50%) scale(.6)";setTimeout(()=>e.remove(),250)},320);
   }
-  function down(x,y){active={a:{x,y},b:{x,y},live:true,age:0,op:1};webs.push(active);thwip(x,y)}
+  function down(x,y){
+    const w={a:{x,y},b:{x,y},live:true,age:0,op:1};
+    active=w;
+    webs.push(w);
+    thwip(x,y);
+    // Keep each shot visible for 10 seconds, then fade it out.
+    setTimeout(()=>{
+      w.live=false;
+      w.age=1.5;
+      if(active===w) active=null;
+    },10000);
+  }
   function move(x,y){if(active)active.b={x,y}}
-  function up(){if(active){active.live=false;active=null}}
+  function up(){active=null}
   addEventListener("mousedown",e=>down(e.clientX,e.clientY));addEventListener("mousemove",e=>move(e.clientX,e.clientY));addEventListener("mouseup",up);
   addEventListener("touchstart",e=>down(e.touches[0].clientX,e.touches[0].clientY),{passive:true});addEventListener("touchmove",e=>move(e.touches[0].clientX,e.touches[0].clientY),{passive:true});addEventListener("touchend",up,{passive:true});
 
