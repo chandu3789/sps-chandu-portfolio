@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       w.live=false;
       w.age=1.5;
       if(active===w) active=null;
-    },10000);
+    },2000);
   }
   function move(x,y){if(active)active.b={x,y}}
   function up(){active=null}
