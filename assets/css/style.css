@@ -89,6 +89,19 @@ footer{text-align:center;background:#171717;color:#fff;padding:32px 20px;font-we
 .project-card:hover p,.project-card:hover .project-no{color:#fff}
 .project-card:hover .project-no{color:#fff}
 .project-card:hover .tags span{background:#fff;color:#111;border-color:#fff}
+.project-card:hover .project-btn-live{background:#fff;color:var(--red);border-color:#fff}
+.project-card:hover .project-btn-github{background:transparent;color:#fff;border-color:#fff}
+.project-card:hover .project-btn-soon{background:transparent;color:#fff;border-color:#fff}
+
+/* === Project link buttons === */
+.project-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.project-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 16px;border-radius:8px;font-size:.78rem;font-weight:800;letter-spacing:.5px;border:2px solid;transition:background .22s,color .22s,border-color .22s,transform .22s,box-shadow .22s;cursor:pointer}
+.project-btn i{font-size:.82rem}
+.project-btn-live{background:var(--red);color:#fff;border-color:var(--red)}
+.project-btn-live:hover{background:#111;color:#fff;border-color:#111;box-shadow:4px 4px 0 var(--red);transform:translateY(-2px)}
+.project-btn-github{background:#111;color:#fff;border-color:#111}
+.project-btn-github:hover{background:var(--red);color:#fff;border-color:var(--red);box-shadow:4px 4px 0 #111;transform:translateY(-2px)}
+.project-btn-soon{background:transparent;color:#98a2b3;border-color:#dfe3e8;cursor:default;font-style:italic}
 .cert-list div:hover{
   background:var(--red);
   color:#fff;
