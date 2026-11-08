@@ -4,7 +4,7 @@
   "description": "Sanapala Purna Sai Chandu — Full Stack Developer and AI & Automation Enthusiast",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#171717",
+  "background_color": "#ffffff",
   "theme_color": "#b51217",
   "icons": [
     {
@@ -21,3 +21,4 @@
     }
   ]
 }
+

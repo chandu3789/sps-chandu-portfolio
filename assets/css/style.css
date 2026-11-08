@@ -10,7 +10,7 @@ a{text-decoration:none;color:inherit}
 #fx-canvas{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9999}
 .topbar{height:66px;position:fixed;top:0;left:0;right:0;background:#171717;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 max(6vw,40px);z-index:100;border-bottom:2px solid var(--red)}
 .brand{font-family:var(--comic);font-size:1.8rem;letter-spacing:1px;display:flex;align-items:center;gap:10px}.brand span{color:var(--red)}
-.brand-logo{height:40px;width:auto;border-radius:4px}
+.brand-logo{height:44px;width:44px;border-radius:50%;object-fit:cover;border:2px solid var(--red);box-shadow:0 0 10px rgba(181,18,23,.3)}
 .topbar ul{display:flex;gap:42px;list-style:none}.topbar a{font-weight:700;letter-spacing:2px;font-size:.88rem}.topbar ul a:hover{color:#e33}
 main{position:relative;z-index:1}.section{max-width:1280px;margin:auto;padding:110px 6vw}
 .hero{min-height:780px;padding:66px 7vw 40px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;overflow:hidden}
