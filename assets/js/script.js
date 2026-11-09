@@ -100,3 +100,46 @@ document.addEventListener("DOMContentLoaded",()=>{
       }
     });
   }
+
+  // Certificate Modal / Lightbox
+  const certModal = document.getElementById("cert-modal");
+  const certModalImg = document.getElementById("cert-modal-img");
+  const certCloseBtn = document.querySelector(".cert-modal-close");
+  const certOverlay = document.querySelector(".cert-modal-overlay");
+
+  function openCert(src, altText) {
+    if (!certModal || !certModalImg) return;
+    certModalImg.src = src;
+    certModalImg.alt = altText || "Certificate";
+    certModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeCert() {
+    if (!certModal) return;
+    certModal.classList.remove("active");
+    document.body.style.overflow = "";
+    setTimeout(() => {
+      if (!certModal.classList.contains("active") && certModalImg) {
+        certModalImg.src = "";
+      }
+    }, 350);
+  }
+
+  document.querySelectorAll(".cert-view-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      const certSrc = btn.getAttribute("data-cert");
+      const certTitle = btn.closest(".cert-item")?.querySelector(".cert-name")?.textContent || "Certificate";
+      if (certSrc) openCert(certSrc, certTitle);
+    });
+  });
+
+  if (certCloseBtn) certCloseBtn.addEventListener("click", closeCert);
+  if (certOverlay) certOverlay.addEventListener("click", closeCert);
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && certModal?.classList.contains("active")) {
+      closeCert();
+    }
+  });

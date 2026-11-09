@@ -169,9 +169,18 @@
         <h2>CERTIFICATIONS<em>.</em></h2>
       </div>
       <div class="cert-list">
-        <div>Oracle Cloud Infrastructure Generative AI Professional Certification</div>
-        <div>Oracle AI Foundations Associate</div>
-        <div>Oracle Cloud Infrastructure DevOps Professional Certification</div>
+        <div class="cert-item">
+          <span class="cert-name">Oracle Cloud Infrastructure Generative AI Professional Certification</span>
+          <button class="cert-view-btn" data-cert="assets/img/certs/cert-genai.png"><i class="fa-solid fa-eye"></i> VIEW CERTIFICATE</button>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Oracle AI Foundations Associate</span>
+          <button class="cert-view-btn" data-cert="assets/img/certs/cert-ai-foundations.jpg"><i class="fa-solid fa-eye"></i> VIEW CERTIFICATE</button>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Oracle Cloud Infrastructure DevOps Professional Certification</span>
+          <button class="cert-view-btn" data-cert="assets/img/certs/cert-devops.png"><i class="fa-solid fa-eye"></i> VIEW CERTIFICATE</button>
+        </div>
       </div>
     </section>
 
@@ -243,6 +252,15 @@
   </main>
 
   <footer>© SPS CHANDU · BUILT WITH CODE, AI &amp; A LITTLE SPIDER-SENSE 🕷️</footer>
+
+  <!-- Certificate Lightbox Modal -->
+  <div id="cert-modal" class="cert-modal">
+    <div class="cert-modal-overlay"></div>
+    <div class="cert-modal-content">
+      <button class="cert-modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <img id="cert-modal-img" src="" alt="Certificate">
+    </div>
+  </div>
 
   <div class="web-instruction"><i class="fa-solid fa-circle-info"></i> Click &amp; drag anywhere to shoot Spider Webs!</div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
