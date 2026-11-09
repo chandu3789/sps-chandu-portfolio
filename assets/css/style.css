@@ -9,8 +9,12 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 a{text-decoration:none;color:inherit}
 #fx-canvas{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9999}
 .topbar{height:66px;position:fixed;top:0;left:0;right:0;background:#171717;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 max(6vw,40px);z-index:100;border-bottom:2px solid var(--red)}
-.brand{font-family:var(--comic);font-size:1.8rem;letter-spacing:1px;display:flex;align-items:center;gap:10px}.brand span{color:var(--red)}
-.brand-logo{height:48px;width:48px;border-radius:50%;object-fit:cover;border:2px solid var(--red);box-shadow:0 0 10px rgba(181,18,23,.3)}
+.brand{font-family:var(--comic);font-size:1.8rem;letter-spacing:1px;display:flex;align-items:center;gap:12px}.brand span{color:var(--red)}
+.brand-spider{width:48px;height:48px;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:spiderPulse 2.5s ease-in-out infinite;filter:drop-shadow(0 0 8px rgba(215,25,32,.6))}
+.brand-spider .spider-svg{width:100%;height:100%;border-radius:50%}
+.brand:hover .brand-spider{animation:spiderBounce .5s ease;filter:drop-shadow(0 0 16px rgba(215,25,32,.9))}
+@keyframes spiderPulse{0%,100%{filter:drop-shadow(0 0 6px rgba(215,25,32,.5));transform:scale(1)}50%{filter:drop-shadow(0 0 14px rgba(215,25,32,.8));transform:scale(1.06)}}
+@keyframes spiderBounce{0%{transform:scale(1)}30%{transform:scale(1.2) rotate(-8deg)}60%{transform:scale(.95) rotate(4deg)}100%{transform:scale(1) rotate(0)}}
 .topbar ul{display:flex;gap:42px;list-style:none}.topbar a{font-weight:700;letter-spacing:2px;font-size:.88rem}.topbar ul a:hover{color:#e33}
 main{position:relative;z-index:1}.section{max-width:1280px;margin:auto;padding:110px 6vw}
 .hero{min-height:780px;padding:66px 7vw 40px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;overflow:hidden}

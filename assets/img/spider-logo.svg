@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#222"/>
+      <stop offset="100%" stop-color="#111"/>
+    </radialGradient>
+    <radialGradient id="sp" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#e33"/>
+      <stop offset="100%" stop-color="#b51217"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="98" fill="url(#bg)" stroke="#b51217" stroke-width="3"/>
+  <!-- Spider head -->
+  <ellipse cx="100" cy="72" rx="11" ry="16" fill="url(#sp)"/>
+  <!-- Spider abdomen -->
+  <ellipse cx="100" cy="106" rx="16" ry="24" fill="url(#sp)"/>
+  <!-- Left legs -->
+  <path d="M89 65 C65 42 35 22 12 10" stroke="#d71920" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M87 76 C58 65 28 56 5 48" stroke="#d71920" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M85 102 C52 96 22 108 4 132" stroke="#d71920" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M87 118 C62 140 38 165 18 190" stroke="#d71920" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- Right legs -->
+  <path d="M111 65 C135 42 165 22 188 10" stroke="#d71920" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M113 76 C142 65 172 56 195 48" stroke="#d71920" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M115 102 C148 96 178 108 196 132" stroke="#d71920" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M113 118 C138 140 162 165 182 190" stroke="#d71920" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- Eyes -->
+  <ellipse cx="94" cy="68" rx="4.5" ry="6" fill="#fff" opacity=".95"/>
+  <ellipse cx="106" cy="68" rx="4.5" ry="6" fill="#fff" opacity=".95"/>
+</svg>
+
